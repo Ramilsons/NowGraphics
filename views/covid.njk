@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+    {% block titulo %}
+        <title>Covid-19</title>
+    {% endblock titulo %}
+    {% block content %}
+        <div class="container">
+            <div class="grid_externo">
+                {% for grafico in graficos %}
+                    {% if grafico.gender == "covid" %}
+                    
+                    <div class="cards">
+                        <div class="lateral">
+                            <p>{{grafico.title}}</p>
+                            <a target="_blank" href="{{grafico.url_fonte}}">Fonte</a>
+                        </div>
+                        <div class="card">
+                            <div class="imagens_card">
+                                <a href="#" class="class_imagem" id="{{grafico.url_image}}">
+                                <img class="imagens_card" src="{{grafico.url_image}}" alt="Gráfico {{grafico.title}}">
+                                </a>
+                                <div class="icons">                               
+                                    <a href="/{{grafico.id}}/edit"><i class="material-icons">edit</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock content %}  

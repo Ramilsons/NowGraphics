@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="create.css">
+        <title>Novo Gráfico</title>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="/" class="topic_menu">HOME</a>
+                <a href="covid" class="topic_menu">COVID-19</a>
+                <a href="" class="topic_menu">EDUCAÇÃO</a>
+                <a href="politica" class="topic_menu">POLÍTICA</a>
+            </nav>
+            <div class="logo_nav">
+                <img src="imagens/logonav.png" alt="Logo da Now Graphic">
+            </div>
+        </header>
+        <section class="centro">
+            <div class="details">
+                <form action="covid" method="POST">
+                    <h3>CADASTRO DE GRÁFICO</h3>
+                    <div class=item>
+                        <div>URL do gráfico</div>
+                        <div><input type="url" name="url_image" required placeholder="http://"></div>
+                    </div>
+                    <div class=item>
+                        <div>Título</div>
+                        <div><input type="text" name="title" placeholder="digite o título"></div>
+                    </div>
+                    <div class=item>
+                        <div>Fonte</div>
+                        <div><input type="url" name="url_fonte" required placeholder="http://"></div>
+                    </div>
+                    <div class=item>
+                        <div>Tema</div>
+                        <span><input type="radio" name="gender" value="covid" checked>Covid-19</span>
+                        <span><input type="radio" name="gender" value="educacao">Educação</span>
+                        <span><input type="radio" name="gender" value="politica">Política</span>
+                    </div>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>    
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

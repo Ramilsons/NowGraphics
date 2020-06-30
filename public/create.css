@@ -1,0 +1,95 @@
+:root {
+    --color--roxo: #993399;
+    --color--cinza: #696969;
+    --color--branco_gelo: #F5F5F5;
+    --color--roxo_escuro: rgba(60%, 20%, 60%, 0.3);
+}
+body{
+    background-color: var(--color--branco_gelo);
+}
+
+.centro{
+    width: 600px;
+    min-height: 400px;
+    background-color: white;
+    /*opacity: 0.6;*/
+    padding-bottom: 15px;
+    margin: 30px auto 0 auto;
+    border-radius: 15px;
+    color: var(--color--roxo);
+}
+.details{
+    width: 80%;
+    margin: 0px auto;
+}
+h3{
+    padding-top: 20px;
+
+}
+.item{
+    padding: 13px 0px;
+    margin: 1px 0px;
+    color: #993399;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+.item:nth-child(1){
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.item div:nth-child(1) {
+    font-size: 13px;
+    color: #993399;
+    opacity: 0.9;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+
+}
+
+.item span{
+    padding: 8px 16px;
+    background-color: rgba(0%, 0%, 0%, 0.5);;
+    border-radius: 16px;
+    color: #ffffff;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.details .item+.item+.item+.item{
+    border: none;
+}
+input{
+    border: none;
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-size: 18px;
+
+}
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+}
+
+button{ 
+    width: 50%;
+    color: white;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    background-color: var(--color--roxo);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* BOTAO DELETE */
+#form-delete button[type="submit"]{
+    margin: 8px auto;
+    box-sizing: border-box;
+    background-color: lightcoral;
+}

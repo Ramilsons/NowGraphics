@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="covid.css">
+        {% block titulo %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="/" class="topic_menu">HOME</a>
+                <a href="covid" class="topic_menu">COVID-19</a>
+                <a href="educacao" class="topic_menu">EDUCAÇÃO</a>
+                <a href="politica" class="topic_menu" ativo>POLÍTICA</a>
+                <span class="topic_menu_cadastrar"><a href="/create">ADICIONAR</a></span>
+            </nav>
+            <div class="logo_nav">
+                <img src="imagens/logonav.png" alt="Logo da Now Graphic">
+            </div>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+                <div class="modal-content">
+                    <img src="">
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "grafico": [
+    {
+      "id": 2,
+      "title": "Número de falta dos senadores durante os meses de 2019.",
+      "url_fonte": "https://google.com.br",
+      "url_image": "https://secureservercdn.net/198.71.233.195/dc9.efb.myftpupload.com/wp-content/uploads/2017/02/gr%C3%A1fico-combina%C3%A7%C3%A3o-2-gr%C3%A1ficos-excel.png?time=1591405134",
+      "gender": "politica"
+    },
+    {
+      "id": 3,
+      "title": "RN tem sexta maior incidência de casos de coronavírus do país, diz Ministério da Saúde",
+      "url_fonte": "https://g1.globo.com/",
+      "url_image": "https://s2.glbimg.com/HfJrZmJr8bcF_7R--SLO1_qcdnU=/0x0:829x412/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/i/t/pHPBI0TxWQrbklvbzTng/grafico-corona-ms.jpg",
+      "gender": "covid"
+    }
+  ]
+}

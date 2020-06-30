@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/create.css">
+        <title>Alteração de Gráfico</title>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="/" class="topic_menu">HOME</a>
+                <a href="/covid" class="topic_menu">COVID-19</a>
+                <a href="" class="topic_menu">EDUCAÇÃO</a>
+                <a href="/politica" class="topic_menu">POLÍTICA</a>
+                <span class="topic_menu_cadastrar"><a href="/create">ADICIONAR</a></span>
+            </nav>
+            <div class="logo_nav">
+                <img src="/imagens/logonav.png" alt="Logo da Now Graphic">
+            </div>
+        </header>
+        <section class="centro">
+            <div class="details">
+                <form method="POST" action="/covid?_method=PUT">
+                    <h3>ALTERAR GRÁFICO</h3>
+                    <div class=item>
+                        <div>URL do gráfico</div>
+                        <div><input type="url" name="url_image" required placeholder="http://" value="{{grafico.url_image}}"></div>
+                    </div>
+                    <div class=item>
+                        <div>Título</div>
+                        <div><input type="text" name="title" placeholder="digite o título" value="{{grafico.title}}"></div>
+                    </div>
+                    <div class=item>
+                        <div>Fonte</div>
+                        <div><input type="url" name="url_fonte" required placeholder="http://" value="{{grafico.url_fonte}}"></div>
+                    </div>
+                    <div class=item>
+                        <div>Tema</div>
+                        <span>
+                            <input type="radio" name="gender" value="covid" 
+                            {% if grafico.gender == "covid" %}
+                            checked {% endif %}>Covid-19
+                        </span>
+                        <span>
+                            <input type="radio" name="gender" value="educacao" 
+                            {% if grafico.gender == "educacao" %} 
+                            checked {% endif %}>Educação
+                        </span>
+                        <span>
+                            <input type="radio" name="gender" value="politica" 
+                            {% if grafico.gender == "politica" %} 
+                            checked {% endif %}>Política</span>
+                    </div>
+                    <button type="submit">Salvar</button>
+
+                    <input type="hidden" name="id" value={{grafico.id}}>
+                </form>
+                <form id="form-delete" action="/covid?_method=DELETE" method="post">
+                    <input type="hidden" name="id" value={{grafico.id}}>
+                    <button type="submit">Deletar</button>   
+                </form>
+            </div>    
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
